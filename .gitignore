@@ -1,0 +1,59 @@
+# ============================================
+# Terraform .gitignore
+# ============================================
+
+# Local .terraform directories
+.terraform/
+.terraform.*
+
+# Terraform state files (機密情報を含む可能性があるため除外)
+*.tfstate
+*.tfstate.*
+
+# Terraform plan files (機密情報を含む可能性があるため除外)
+*.tfplan
+*.tfplan.*
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Override files (ローカル開発用のオーバーライド)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI configuration files (個人設定を含むため除外)
+.terraformrc
+terraform.rc
+
+# Variable files with sensitive data (実際の値を含むため除外)
+terraform.tfvars
+*.auto.tfvars
+
+# Ignore Mac .DS_Store files
+.DS_Store
+
+# Ignore vim swap files
+*.swp
+*.swo
+*~
+
+# Ignore JetBrains IDE files
+.idea/
+*.iml
+*.iws
+
+# Ignore VS Code settings (プロジェクト固有の設定は残したい場合は調整)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# OS generated files
+Thumbs.db
+
+# Direnv
+*.envrc

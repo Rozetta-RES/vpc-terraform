@@ -1,0 +1,24 @@
+# ============================================
+# Sample terraform.tfvars for EC2 Project
+# このファイルをコピーして terraform.tfvars として使用してください
+# cp terraform.tfvars.example terraform.tfvars
+# ============================================
+
+# プロジェクト名（リソース名のプレフィックスになります）
+project_name = "my-project"
+
+# 環境名
+environment = "production"
+
+# AWS リージョン
+aws_region = "ap-northeast-1"
+
+# VPC Remote State の設定
+vpc_state_bucket = "terraform-state-713621183255"
+vpc_state_key    = "vpc/terraform.tfstate"
+
+# Bastion Host のインスタンスタイプ
+bastion_instance_type = "t3a.small"
+
+# Bastion Host のルートボリュームサイズ (GB)
+bastion_volume_size = 80

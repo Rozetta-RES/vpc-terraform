@@ -1,0 +1,2 @@
+# このファイルを backend.hcl にコピーして使用してください
+bucket = "terraform-state-XXXXXXXXXXXX"
