@@ -1,0 +1,49 @@
+# ===========================
+# 基本設定
+# ===========================
+aws_region   = "ap-northeast-1"
+project_name = "vpc-peering"
+environment  = "dev"
+
+# ===========================
+# 既存VPC設定
+# ===========================
+# 踏み台VPC
+bastion_vpc_id   = "vpc-xxxxxxxxxxxxxxxxx"  # 要変更
+bastion_vpc_cidr = "10.0.0.0/16"            # 要変更
+
+# アプリVPC
+app_vpc_id   = "vpc-yyyyyyyyyyyyyyyyy"  # 要変更
+app_vpc_cidr = "10.1.0.0/16"            # 要変更
+
+# ===========================
+# ルートテーブル設定
+# ===========================
+# 踏み台VPCのルートテーブルID (パブリックサブネット用など)
+bastion_route_table_ids = [
+  "rtb-xxxxxxxxxxxxxxxxx",  # 要変更
+]
+
+# アプリVPCのルートテーブルID (プライベートサブネット用など)
+app_route_table_ids = [
+  "rtb-yyyyyyyyyyyyyyyyy",  # 要変更: private-1a
+  "rtb-zzzzzzzzzzzzzzzzz",  # 要変更: private-1c
+  "rtb-wwwwwwwwwwwwwwwww",  # 要変更: private-1d
+]
+
+# ===========================
+# RDS設定
+# ===========================
+rds_security_group_id = "sg-xxxxxxxxxxxxxxxxx"  # 要変更: RDSのセキュリティグループID
+rds_port              = 3306                    # MySQL/Aurora: 3306, PostgreSQL: 5432
+
+# ===========================
+# 踏み台設定 (オプション)
+# ===========================
+# 踏み台インスタンスのセキュリティグループID (既存の場合のみ設定)
+bastion_security_group_id = ""  # 任意
+
+# SSH接続を許可するCIDRブロック (踏み台への直接SSH用、Session Manager使用時は不要)
+allowed_ssh_cidr_blocks = [
+  # "xxx.xxx.xxx.xxx/32",  # 要変更: 自分のIPアドレス
+]

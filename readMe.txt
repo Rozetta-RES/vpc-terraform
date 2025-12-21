@@ -16,3 +16,6 @@ variables.tf を一通り確認し、問題なければ terraform init、plan、
 
 本来は terraform.tfvars.example を terraform.tfvars として作成し、各変数を環境に合わせてデプロイすべきだが
 variables.tf を作成しているので、variables.tf に問題がなければそのまま terraform init、plan、apply を実行する
+
+4. vpc/production/vpc-peering 内のリソースをデプロイ
+(後日記載予定)
