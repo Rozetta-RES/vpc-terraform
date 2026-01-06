@@ -1,3 +1,6 @@
+本リソースの目的
+  他 VPC で稼働中の RDS インスタンスに接続する踏み台環境の構築
+
 セットアップ手順
 
 1. terraform-backend-setup ディレクトリ内で terraform init、plan、apply を実行
