@@ -7,7 +7,7 @@
 terraform {
   backend "s3" {
     # S3 バケット名（VPCプロジェクトと同じバケットを使用）
-    bucket = "terraform-state-475975307153"  # 適切なバケット名に変更してください
+    bucket = "terraform-state-862763484576"  # 適切なバケット名に変更してください
     
     # State ファイルのパス（VPCとは異なるkeyを使用）
     key = "ec2/onyaku-basion/terraform.tfstate"
