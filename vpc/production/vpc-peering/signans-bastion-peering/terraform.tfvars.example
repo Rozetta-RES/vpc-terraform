@@ -35,16 +35,16 @@ app_route_table_ids = [
 # RDS設定
 # ===========================
 # 注意: スクリプトで既にルールを追加済みの場合、この設定は不要です
-rds_security_group_id = "sg-xxxxxxxxxxxxxxxxx"  # 要変更: RDSのセキュリティグループID
-rds_port              = 3306                    # MySQL/Aurora: 3306, PostgreSQL: 5432
+# rds_security_group_id = "sg-xxxxxxxxxxxxxxxxx"  # 要変更: RDSのセキュリティグループID
+# rds_port              = 3306                    # MySQL/Aurora: 3306, PostgreSQL: 5432
 
 # ===========================
 # 踏み台設定 (オプション)
 # ===========================
 # 踏み台インスタンスのセキュリティグループID (既存の場合のみ設定)
-bastion_security_group_id = ""  # 任意
+# bastion_security_group_id = ""  # 任意
 
 # SSH接続を許可するCIDRブロック (踏み台への直接SSH用、Session Manager使用時は不要)
-allowed_ssh_cidr_blocks = [
-  # "xxx.xxx.xxx.xxx/32",  # 要変更: 自分のIPアドレス
-]
+# allowed_ssh_cidr_blocks = [
+#   # "xxx.xxx.xxx.xxx/32",  # 要変更: 自分のIPアドレス
+# ]
